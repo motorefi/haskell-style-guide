@@ -1,4 +1,4 @@
-# ITProTV's Haskell style guide
+# Caribou's Haskell style guide
 
 > [Haskell 2010](https://www.haskell.org/onlinereport/haskell2010/) ought to be enough for anybody.
 
