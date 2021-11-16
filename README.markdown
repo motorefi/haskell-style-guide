@@ -173,23 +173,6 @@ sum = foldr (+) 0
 
 <https://wiki.haskell.org/Pointfree>
 
-## Avoid multiple function declarations
-
-Multiple function declarations force you to repeat the function name and all the arguments.
-Renaming any one of them requires changing every line.
-Also each function declaration could use different argument names, which would be confusing.
-
-``` hs
--- bad
-factorial 0 = 1
-factorial n = n * factorial (n - 1)
-
--- good
-factorial n = case n of
-  0 -> 1
-  _ -> n * factorial (n - 1)
-```
-
 ## Prefer `do` notation
 
 `do` notation is generally easier to read because it's similar to imperative code.
