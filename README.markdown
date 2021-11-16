@@ -41,7 +41,6 @@ please [open an issue](https://github.com/EdutainmentLIVE/haskell-style-guide/is
 - [Use camel case names](#use-camel-case-names)
 - [Avoid primes in names](#avoid-primes-in-names)
 - [Avoid multiple underscore suffixes](#avoid-multiple-underscore-suffixes)
-- [Avoid explicit export lists](#avoid-explicit-export-lists)
 - [Avoid `String`](#avoid-string)
 - [Use `newtype` liberally](#use-newtype-liberally)
 - [Use smart constructors](#use-smart-constructors)
@@ -399,18 +398,6 @@ users__ = ...
 users1 = ...
 users2 = ...
 users3 = ...
-```
-
-## Avoid explicit export lists
-
-Explicitly listing exports often causes a lot of busywork.
-
-``` hs
--- bad
-module Toppings ( pepperoni ) where
-
--- good
-module Toppings where
 ```
 
 ## Avoid `String`
