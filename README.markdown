@@ -2,7 +2,7 @@
 
 > [Haskell 2010](https://www.haskell.org/onlinereport/haskell2010/) ought to be enough for anybody.
 
-This guide describes how we like to write [Haskell](https://www.haskell.org) at [ITProTV](https://www.itpro.tv).
+This guide describes how we like to write [Haskell](https://www.haskell.org) at [Caribou](https://www.gocaribou.com).
 It focuses more on style and best practices than formatting and layout.
 
 These are _recommendations_, not hard and fast rules.
@@ -265,11 +265,11 @@ Splitting imports into groups makes it easier to figure out where to look for do
 -- bad
 import qualified Data.Aeson as Aeson
 
-import qualified ITProTV.Internal.Secrets as Secrets
+import qualified Insurance.Internal.Secrets as Secrets
 
 -- good
 import qualified Data.Aeson as Aeson
-import qualified ITProTV.Internal.Secrets as Secrets
+import qualified Insurance.Internal.Secrets as Secrets
 ```
 
 ## Avoid importing parents
