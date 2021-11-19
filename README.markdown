@@ -20,7 +20,7 @@ please [open an issue](https://github.com/EdutainmentLIVE/haskell-style-guide/is
 - [Avoid compiler warnings](#avoid-compiler-warnings)
 - [Avoid language extensions](#avoid-language-extensions)
 - [Apply HLint suggestions](#apply-hlint-suggestions)
-- [Format with Brittany](#format-with-brittany)
+- [Format with Fourmolu](#format-with-fourmolu)
 - [Prefer line comments](#prefer-line-comments)
 - [Prefer `let` over `where`](#prefer-let-over-where)
 - [Avoid out of order binders](#avoid-out-of-order-binders)
@@ -89,12 +89,10 @@ We use a somewhat custom configuration, but the exact details aren't too importa
 
 <https://neilmitchell.blogspot.com/2009/09/how-i-use-hlint.html>
 
-## Format with Brittany
+## Format with Fourmolu
 
-We use [Brittany](https://github.com/lspitzner/brittany#readme) to format all Haskell code.
+We use [Fourmolu](https://github.com/fourmolu/fourmolu) to format all Haskell code.
 It may not format everything perfectly, but we prefer it to arguing about layout.
-
-<https://chrisdone.com/posts/hindent-5>
 
 ## Prefer `let` over `where`
 
@@ -139,7 +137,7 @@ in x
 putStrLn ("howdy " ++ maybe "stranger." (++ "!") maybeName)
 
 -- good
-putStrLn (case maybeName of
+putStrLn "howdy " ++ (case maybeName of
   Nothing -> "stranger."
   Just name -> name ++ "!")
 ```
@@ -558,3 +556,10 @@ case maybeFieldBar of
   Just baz -> Baz.maybeField baz
   Nothing -> Nothing
 ```
+
+## Prefer simple code over comments
+
+Comments can be considered a code smell. If the code needs commented then it's
+probably too complex. Of course there will be exceptions. During code review, if
+someone has a question about the code, consider this an opportunity to simplify
+the code or if necessary, comment it.
