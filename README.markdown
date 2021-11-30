@@ -59,6 +59,15 @@ We ignore a few warnings:
 - `-Wno-implicit-prelude`
 - `-Wno-safe`
 - `-Wno-unsafe`
+- `-Wno-missing-exported-signatures`
+- `-Wno-missing-import-lists`
+- `-Wno-missed-specialisations`
+- `-Wno-all-missed-specialisations`
+- `-Wno-missing-local-signatures`
+- `-Wno-monomorphism-restriction`
+- `-Wno-prepositive-qualified-module`
+- `-Wno-missing-safe-haskell-mode`
+- `-Wno-missing-deriving-strategies`
 
 <https://medium.com/mercury-bank/enable-all-the-warnings-a0517bc081c3>
 
